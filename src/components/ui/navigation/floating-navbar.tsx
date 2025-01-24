@@ -62,7 +62,7 @@ export const FloatingNav = ({
           borderRadius: { duration: 0 },
         }}
         className={cn(
-          "max-w-full space-y-4  fixed top-6 inset-x-6 md:inset-x-10 mx-auto border border-transparent dark:border-white/[0.2]  dark:bg-black bg-white shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000]  pr-2 pl-4 xl:pl-8 py-0 xl:py-2 font-[family-name:var(--font-montserrat)]",
+          "max-w-full space-y-4  fixed top-6 inset-x-6 md:inset-x-10 mx-auto border border-transparent dark:border-white/[0.2]  dark:bg-black bg-white shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000]  pr-2 pl-4 xl:pl-8 py-0 xl:py-2",
           className
         )}
       >
@@ -105,6 +105,28 @@ export const FloatingNav = ({
         {isOpen && (
           <div className="flex flex-col space-y-4 pb-4">
             <NavItems items={navItems} />
+            <div className=" divide-y-2 items-center">
+              <div className="py-4">
+                <Link
+                  href={"/login"}
+                  className={` flex gap-1 !rounded-full capitalize`}
+                >
+                  <IconUser className="h-5 w-5" />
+                  mon compte
+                </Link>
+              </div>
+
+              <div className="pt-4">
+                <Link
+                  href={"/contact"}
+                  className={`${buttonVariants({
+                    variant: "default",
+                  })} !rounded-full capitalize`}
+                >
+                  nous contacter
+                </Link>
+              </div>
+            </div>
           </div>
         )}
       </motion.nav>
