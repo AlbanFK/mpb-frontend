@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Montserrat } from "next/font/google";
 import "./globals.css";
 import { FloatingNav } from "@/components/ui/navigation/floating-navbar";
 import menu from "@/lib/constants/menu";
+import Footer from "@/components/ui/sections/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,10 +33,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} antialiased bg-background font-[family-name:var(--font-montserrat)]`}
+        className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} antialiased bg-background font-[family-name:var(--font-montserrat)] flex flex-col`}
       >
         <FloatingNav navItems={menu} />
-        {children}
+        <div className="w-full h-full max-w-[1500px] mx-auto">{children}</div>
+        <Footer />
       </body>
     </html>
   );

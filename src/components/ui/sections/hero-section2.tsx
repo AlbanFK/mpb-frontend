@@ -14,7 +14,7 @@ const HeroSection2 = () => {
           <div>
             <h1>
               <TextGenerateEffect
-                className="text-3xl md:text-4xl lg:text-5xl  xl:text-5xl font-semibold "
+                className="text-3xl md:text-4xl lg:text-5xl  xl:text-5xl font-semibold px-2"
                 filter={false}
                 words={"Vos projets immobiliers à distance !"}
               />

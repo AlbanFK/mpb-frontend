@@ -1,9 +1,10 @@
 import Image from "next/image";
-import { HeroSection } from "@/components/ui/sections/hero-section";
+// import { HeroSection } from "@/components/ui/sections/hero-section";
 import GoalSection from "@/components/ui/sections/goal-section";
 import ServicesSection from "@/components/ui/sections/services-section";
 import { Testimonials } from "@/components/ui/sections/testimonials";
 import HeroSection2 from "@/components/ui/sections/hero-section2";
+import ProSection from "@/components/ui/sections/pro-section";
 
 export default function Home() {
   return (
@@ -11,18 +12,21 @@ export default function Home() {
       {/* <HeroSection /> */}
       <HeroSection2 />
       <GoalSection />
-      <div className="min-h-fit  w-full dark:bg-black bg-white  dark:bg-dot-white/[0.2] bg-dot-black/[0.2] relative flex flex-col items-center justify-center">
+      <ServicesSection />
+
+      <Testimonials />
+
+      <ProSection />
+      {/* <div className="min-h-fit  w-full dark:bg-black bg-white  dark:bg-dot-white/[0.2] bg-dot-black/[0.2] relative flex flex-col items-center justify-center">
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_100%,black)]"></div>
-        <ServicesSection />
-        <Testimonials />
-      </div>
+      </div> */}
       {/* 
       <div className="min-h-fit w-full dark:bg-black bg-white  dark:bg-dot-white/[0.2] bg-dot-black/[0.2] relative flex items-center justify-center">
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_100%,black)]"></div>
         <Testimonials />
       </div> */}
 
-      <div className="flex flex-col items-center justify-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+      {/* <div className="flex flex-col items-center justify-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
         <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
           <Image
             className="dark:invert"
@@ -208,7 +212,7 @@ export default function Home() {
             Go to nextjs.org →
           </a>
         </footer>
-      </div>
+      </div> */}
     </div>
   );
 }
