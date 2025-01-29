@@ -3,11 +3,13 @@ import { HeroSection } from "@/components/ui/sections/hero-section";
 import GoalSection from "@/components/ui/sections/goal-section";
 import ServicesSection from "@/components/ui/sections/services-section";
 import { Testimonials } from "@/components/ui/sections/testimonials";
+import HeroSection2 from "@/components/ui/sections/hero-section2";
 
 export default function Home() {
   return (
     <div className="relative w-full overflow-hidden">
-      <HeroSection />
+      {/* <HeroSection /> */}
+      <HeroSection2 />
       <GoalSection />
       <div className="min-h-fit  w-full dark:bg-black bg-white  dark:bg-dot-white/[0.2] bg-dot-black/[0.2] relative flex flex-col items-center justify-center">
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_100%,black)]"></div>

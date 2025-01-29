@@ -13,6 +13,13 @@ const nextConfig: NextConfig = {
         pathname: "/736x/**",
         search: "",
       },
+      {
+        protocol: "https",
+        hostname: "img.freepik.com",
+        port: "",
+        pathname: "/photos-premium/**",
+        search: "",
+      },
     ],
   },
 };

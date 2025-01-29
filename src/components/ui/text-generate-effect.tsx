@@ -53,11 +53,5 @@ export const TextGenerateEffect = ({
     );
   };
 
-  return (
-    <div className={cn(className)}>
-      <div className="mt-4">
-        <div className=" leading-snug tracking-wide">{renderWords()}</div>
-      </div>
-    </div>
-  );
+  return <div className={cn(className)}>{renderWords()}</div>;
 };
