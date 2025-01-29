@@ -32,6 +32,12 @@ export const AnimatedTestimonials = ({
     return index === active;
   };
 
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   useEffect(() => {
     if (autoplay) {
       const interval = setInterval(handleNext, 5000);
@@ -40,7 +46,8 @@ export const AnimatedTestimonials = ({
   }, [autoplay]);
 
   const randomRotateY = () => {
-    return Math.floor(Math.random() * 21) - 10;
+    return isClient ? Math.floor(Math.random() * 21) - 10 : 0;
+    // return Math.floor(Math.random() * 21) - 10;
   };
   return (
     <div className="max-w-sm md:max-w-4xl mx-auto antialiased font-sans px-4 md:px-8 lg:px-12 pt-20">

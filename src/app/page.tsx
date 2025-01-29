@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 // import { HeroSection } from "@/components/ui/sections/hero-section";
 import GoalSection from "@/components/ui/sections/goal-section";
 import ServicesSection from "@/components/ui/sections/services-section";
