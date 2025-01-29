@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} antialiased bg-zinc-50 dark:bg-zinc-900 font-[family-name:var(--font-montserrat)]`}
+        className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} antialiased bg-background font-[family-name:var(--font-montserrat)]`}
       >
         <FloatingNav navItems={menu} />
         {children}

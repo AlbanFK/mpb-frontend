@@ -1,46 +1,24 @@
 import Image from "next/image";
-import { AuroraBackground } from "@/components/ui/aurora-background";
-import Link from "next/link";
-import { buttonVariants } from "@/components/ui/button";
-// import { motion } from "framer-motion";
-// import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
-// import { FloatingNav } from "@/components/ui/navigation/floating-navbar";
-// import menu from "@/lib/constants/menu";
+import { HeroSection } from "@/components/ui/sections/hero-section";
+import GoalSection from "@/components/ui/sections/goal-section";
+import ServicesSection from "@/components/ui/sections/services-section";
+import { Testimonials } from "@/components/ui/sections/testimonials";
 
 export default function Home() {
   return (
-    <div className="relative w-full">
-      <AuroraBackground>
-        <div className="flex flex-col-reverse md:flex-row justify-between  px-6 md:px-10">
-          <div className="relative w-full md:w-1/2 flex flex-col gap-4 items-center justify-center px-4">
-            <div className="text-3xl md:text-4xl lg:text-5xl  xl:text-7xl font-bold dark:text-white text-center md:pt-0">
-              Background lights are cool you know.
-            </div>
-            <div className="font-extralight text-base md:text-2xl xl:text-3xl xl:text-4xl dark:text-neutral-200 py-4">
-              And this, is chemical burn.
-            </div>
-            <Link
-              href={"/contact"}
-              className={`${buttonVariants({
-                variant: "default",
-                size: "lg",
-              })} !rounded-full capitalize`}
-            >
-              nous contacter
-            </Link>
-          </div>
-          <div className="relative w-full md:w-1/2 h-[50vh]">
-            <Image
-              src={
-                "https://i.pinimg.com/736x/ce/69/a6/ce69a61205a95a2aa632e4bc8799733d.jpg"
-              }
-              alt="hero image"
-              fill
-              className="object-contain"
-            />
-          </div>
-        </div>
-      </AuroraBackground>
+    <div className="relative w-full overflow-hidden">
+      <HeroSection />
+      <GoalSection />
+      <div className="min-h-fit  w-full dark:bg-black bg-white  dark:bg-dot-white/[0.2] bg-dot-black/[0.2] relative flex flex-col items-center justify-center">
+        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_100%,black)]"></div>
+        <ServicesSection />
+        <Testimonials />
+      </div>
+      {/* 
+      <div className="min-h-fit w-full dark:bg-black bg-white  dark:bg-dot-white/[0.2] bg-dot-black/[0.2] relative flex items-center justify-center">
+        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_100%,black)]"></div>
+        <Testimonials />
+      </div> */}
 
       <div className="flex flex-col items-center justify-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
         <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
