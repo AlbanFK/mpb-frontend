@@ -36,7 +36,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} antialiased bg-background font-[family-name:var(--font-montserrat)] flex flex-col`}
       >
         <FloatingNav navItems={menu} />
-        <div className="w-full h-full max-w-[1500px] mx-auto">{children}</div>
+        <div className="w-full h-full max-w-[1500px] mx-auto ">{children}</div>
         <Footer />
       </body>
     </html>
