@@ -16,13 +16,13 @@ function Service() {
           />
         </h3>
 
-        <span className="text-sm max-w-lg lg:self-end">
+        <span className="text-sm md:max-w-lg lg:self-end">
           De la conception à l&apos;achèvement Dévoiler notre gamme de services
           experts Services - Construire une vision, brique par brique
         </span>
       </div>
 
-      <TracingBeam className="mt-10 ml-12">
+      <TracingBeam className="mt-10 ml-0 md:ml-12">
         <div className="flex flex-col divide-y border-y">
           {services.map((service, idx) => (
             <ServiceDetail
