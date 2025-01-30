@@ -30,14 +30,23 @@ export function BentoGridServices() {
         </Link>
       </div>
       {services.map((item, i) => (
-        <ServiceCard key={i} src={item.img} title={item.title} />
+        <ServiceCard key={i} src={item.img} title={item.title} sid={item.id} />
       ))}
     </BentoGrid>
   );
 }
 
-const ServiceCard = ({ src, title }: { src: string; title: string }) => (
-  <div
+const ServiceCard = ({
+  src,
+  title,
+  sid,
+}: {
+  src: string;
+  title: string;
+  sid: number;
+}) => (
+  <Link
+    href={`/services#service${sid}`}
     className={cn(
       "relative flex flex-col justify-end w-full h-full min-h-48 rounded-xl"
     )}
@@ -49,5 +58,5 @@ const ServiceCard = ({ src, title }: { src: string; title: string }) => (
       className="object-cover object-center rounded-xl z-0 brightness-75"
     />
     <span className="z-10 p-4 text-white font-medium">{title}</span>
-  </div>
+  </Link>
 );

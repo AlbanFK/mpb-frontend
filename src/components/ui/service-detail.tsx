@@ -13,7 +13,10 @@ const ServiceDetail = ({
   index: number;
 }) => {
   return (
-    <div className="flex flex-col-reverse lg:flex-row lg:divide-x w-full">
+    <div
+      id={`service${service.id}`}
+      className="flex flex-col-reverse lg:flex-row lg:divide-x w-full"
+    >
       <div className="py-10   lg:basis-4/5 flex gap-8 px-0 md:px-8">
         <div className="flex flex-col gap-8 lg:basis-4/5">
           <span className="text-3xl md:text-4xl text-primary">
