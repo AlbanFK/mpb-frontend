@@ -5,12 +5,14 @@ import { usePathname } from "next/navigation";
 
 function NavItems({
   items,
+  itemsClass,
 }: {
   items: {
     name: string;
     link: string;
     icon?: JSX.Element;
   }[];
+  itemsClass?: string;
 }) {
   const pathname = usePathname();
   return (
@@ -29,7 +31,8 @@ function NavItems({
             href={navItem.link}
             className={cn(
               "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-primary-foreground hover:text-[#fecaca] ",
-              `${pathname === navItem.link ? "text-primary" : ""}`
+              `${pathname === navItem.link ? "text-primary" : ""}`,
+              itemsClass
             )}
           >
             <span className="text-sm font-medium capitalize">
