@@ -23,7 +23,7 @@ function Service() {
       </div>
 
       <TracingBeam className="mt-10 ml-0 md:ml-12">
-        <div className="flex flex-col divide-y border-y">
+        <div className="flex flex-col divide-y border-y divide-primary border-primary">
           {services.map((service, idx) => (
             <ServiceDetail
               key={`service-${service.id}`}
