@@ -10,8 +10,8 @@ export default function Home() {
       <HeroSection2 />
       <GoalSection />
       <ServicesSection />
-      <Testimonials />
       <ProSection />
+      <Testimonials />
     </div>
   );
 }

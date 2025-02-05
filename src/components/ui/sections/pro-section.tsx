@@ -6,7 +6,7 @@ import { buttonVariants } from "../button";
 
 const ProSection = () => {
   return (
-    <section className="flex flex-col lg:flex-row rounded-[var(--radius)] mx-6 md:mx-10 xl:mx-32 gap-8 mt-20 bg-primary-foreground p-4">
+    <section className="flex flex-col lg:flex-row rounded-[var(--radius)] mx-6 md:mx-10 xl:mx-32 gap-8 mt-20 bg-primary-foreground p-6">
       <div className="basis-1/2 p-2 space-y-6">
         <h3 className="text-center md:text-start">
           <TextGenerateEffect

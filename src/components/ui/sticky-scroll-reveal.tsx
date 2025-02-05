@@ -21,17 +21,13 @@ export const StickyScroll = ({
   const [activeCard, setActiveCard] = React.useState(0);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const ref = useRef<any>(null);
-  const { scrollY, scrollYProgress } = useScroll({
+  const { scrollYProgress } = useScroll({
     // uncomment line 22 and comment line 23 if you DONT want the overflow container and want to have it change on the entire page scroll
     target: ref,
     // container: ref,
     offset: ["start start", "end start"],
   });
   const cardLength = content.length;
-
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    console.log("Page scroll: ", latest);
-  });
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
     const cardsBreakpoints = content.map((_, index) => index / cardLength);
@@ -86,7 +82,7 @@ export const StickyScroll = ({
               className={cn(
                 "my-32  transition-[visibility] delay-150 duration-200 ease-in-out",
                 `${index < activeCard ? "invisible" : "visible"}`,
-                `${index + 1 === cardLength ? "pt-10" : "pt-0"}`,
+                `${index + 1 === cardLength ? "pt-10" : "pt-10"}`,
                 `${index === 0 ? "mt-0" : "mt-32"}`,
                 "lg:visible lg:my-40"
               )}
@@ -129,12 +125,12 @@ export const StickyScroll = ({
               </motion.p>
             </div>
           ))}
-          <div className=" lg:h-32" />
+          <div className=" lg:h-40" />
         </div>
       </div>
       <div
         className={cn(
-          "lg:basis-6/12 hidden lg:block w-full h-[calc(70vmin+5rem)] sticky top-10 overflow-hidden",
+          "lg:basis-6/12 hidden lg:block w-full h-[calc(70vmin+5rem)] sticky top-10 lg:top-20 overflow-hidden",
           contentClassName
         )}
       >

@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "i.pinimg.com",
         port: "",
-        pathname: "/736x/**",
+        pathname: "/**",
         search: "",
       },
       {

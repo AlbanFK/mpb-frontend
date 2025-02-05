@@ -9,7 +9,7 @@ function References() {
     return {
       title: `${name} ${designation}`,
       description: quote,
-      content: <Carousel slides={[{ src }]} />,
+      content: <Carousel slides={[{ src }, { src }]} />,
     };
   });
   return (

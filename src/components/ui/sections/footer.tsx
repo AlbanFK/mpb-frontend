@@ -6,7 +6,7 @@ import menu from "@/lib/constants/menu";
 const Footer = () => {
   const date = new Date();
   return (
-    <footer className=" flex flex-col mt-16 pt-4 min-h-24  gap-4 bg-red-700 text-white">
+    <footer className=" flex flex-col mt-16 pt-4 min-h-24  gap-4 bg-rose-700 text-white">
       <div className=" px-6 md:px-10 flex flex-col md:flex-row items-center  justify-evenly  gap-8">
         <div className="space-y-2 text-center md:text-start">
           <span className="text-5xl">BIG LOGO</span>
