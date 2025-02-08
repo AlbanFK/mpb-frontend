@@ -304,8 +304,8 @@ const defaultItemAnimationVariants: Record<
 
 export function TextAnimate({
   children,
-  // delay = 0,
-  // duration = 0.3,
+  delay = 0,
+  duration = 0.3,
   // variants,
   className,
   segmentClassName,
@@ -365,6 +365,7 @@ export function TextAnimate({
         initial="hidden"
         whileInView={startOnView ? "show" : undefined}
         animate={startOnView ? undefined : "show"}
+        transition={{ delay, duration }}
         exit="exit"
         className={cn("whitespace-pre-wrap", className)}
         {...props}
