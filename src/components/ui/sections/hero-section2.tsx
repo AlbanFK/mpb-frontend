@@ -9,7 +9,7 @@ import Image from "next/image";
 
 const HeroSection2 = () => {
   return (
-    <section className="w-full flex flex-col h-screen md:max-h-[700px] bg-purple-50 pb-6 ">
+    <section className="w-full flex flex-col md:h-screen md:max-h-[700px] bg-purple-50 pb-6 ">
       <div className="flex-none h-16 md:h-20 "></div>
       <div className="grow grid grid-cols-1 md:grid-cols-5 gap-3 md:gap-6 mx-6 md:mx-10 mb-2  ">
         <div className="md:col-span-3 rounded-3xl bg-cover min-h-[300px]  bg-bottom p-7 md:p-14 relative bg-[url('https://i.pinimg.com/1200x/0b/28/d2/0b28d2253c5fdfd857c4205913825787.jpg')]">
