@@ -66,7 +66,7 @@ const HeroSection2 = () => {
             }}
             className="lg:col-span-2 bg-primary rounded-3xl p-8 text-primary-foreground flex justify-center items-center"
           >
-            <span className="text-sm lg:test-base">
+            <span className="text-sm lg:text-base">
               Explore our latest collection of premium properties and find your
               dream home today. From luxurious estates to trendy urban condos,
               we have something for every lifestyle and budget.

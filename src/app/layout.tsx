@@ -43,10 +43,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} ${jakarta.variable} antialiased bg-background font-[family-name:var(--font-plus-jakarta-sans)] flex flex-col `}
+        className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} ${jakarta.variable} antialiased bg-background font-[family-name:var(--font-plus-jakarta-sans)] `}
       >
         <FloatingNav navItems={menu} />
-        <div className="w-full h-full max-w-[1500px] mx-auto ">{children}</div>
+        <div className=" w-full  max-w-[1500px] mx-auto ">{children}</div>
         <Footer />
       </body>
     </html>
