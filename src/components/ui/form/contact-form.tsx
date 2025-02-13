@@ -16,7 +16,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { PhoneInput } from "@/components/phone-input";
+import { PhoneInput } from "@/components/ui/phone-input";
 
 const formSchema = z.object({
   name: z.string().toLowerCase().min(2).max(50).trim(),
@@ -71,7 +71,7 @@ const ContactForm = () => {
           render={({ field }) => (
             <FormItem>
               <FormControl>
-                <Input placeholder="Email" {...field} />
+                <Input placeholder="Email" type="email" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
